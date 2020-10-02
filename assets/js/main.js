@@ -3,8 +3,14 @@ var game;
 // Create a new game instance 600px wide and 450px tall:
 var config = {
   type: Phaser.AUTO,
-  width: 640,
-  height: 480,
+  scale: {
+        mode: Phaser.Scale.FIT,      
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 800,
+        height: 600
+    },
+  // width: 640,
+  // height: 480,
   pixelArt: true,
   physics: {
     default: "arcade",
@@ -16,6 +22,7 @@ var config = {
   scene: Game
 };
 game = new Phaser.Game(config);
+// game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
 
 // First parameter is how our state will be called.
 // Second parameter is an object containing the needed methods for state functionality

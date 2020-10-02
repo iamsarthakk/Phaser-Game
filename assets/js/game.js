@@ -51,7 +51,7 @@ var Game = {
 
   create: function() {
     // Create background
-    this.physics.add.sprite( 320, 240, "sky");
+    this.physics.add.sprite( 400, 300, "sky");
 
     // Create player
     player = this.physics.add.sprite(32, 110, "dude");
@@ -92,10 +92,10 @@ var Game = {
 
     // Go thru each child and make sure it's on screen
     enemies.children.iterate(function(enemy) {
-      enemy.setX(Phaser.Math.FloatBetween(32, 320 - 32));
-      enemy.setY(Phaser.Math.FloatBetween(32, 240 - 32));
-      if (enemy.x > 320 - 32) {
-        enemy.setX(320 - 48);
+      enemy.setX(Phaser.Math.FloatBetween(40, 400 - 40));
+      enemy.setY(Phaser.Math.FloatBetween(40, 300 - 40));
+      if (enemy.x > 400 - 40) {
+        enemy.setX(400 - 60);
       } else if (enemy.x < 32) {
         enemy.setX(48);
       }
